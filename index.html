@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WhatsAdd</title>
+        <meta name="description" content="Add a stranger's phone number to your WhatsApp in three step!">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="colors.css">
+        <link rel="stylesheet" href="tocas.css">
+    </head>
+    <body>
+        <div class="ts top attached horizontally scrollable large basic link menu">
+            <div class="ts very narrow container">
+                <div class="right menu">
+                    <a class="item" href="javascript:ts('#about-dialog').modal('show');">About</a>
+                    <a class="item" href="javascript:ts('#help-dialog').modal('show');">Help</a>
+                    <a class="item" href="https://github.com/JasonHK/WhatsAdd" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="ts bottom attached large heading padded slate">
+            <div class="ts very narrow container">
+                <span class="header">WhatsAdd</span>
+                <span class="description">Add a stranger's phone number to your WhatsApp in three step!</span>
+            </div>
+        </div>
+
+        <div class="ts very narrow container">
+            <div class="ts borderless segment">
+                <form id="whatsadd-form" class="ts form" action="javascript:formSubmit();" method="GET" autocomplete="off">
+                    <div class="fields">
+                        <div class="five wide required field">
+                            <label>Country code</label>
+                            <div class="ts labeled input">
+                                <div class="ts basic label">+</div>
+                                <input id="country-code" tabindex="1" type="tel" maxlength="3" pattern="[0-9]+" placeholder="852" required autofocus>
+                            </div>
+                        </div>
+                        <div class="eleven wide required field">
+                            <label>Phone number</label>
+                            <input id="phone-number" tabindex="2" type="tel" maxlength="15" pattern="[0-9]+" placeholder="68977740" required>
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <button id="submit-button" tabindex="3" type="submit" class="ts primary right floated labeled icon button">
+                            <i class="whatsapp icon"></i>Add to WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="ts center aligned vertically fitted basic segment">
+                Made with <span class="red"> &#10084;</span> by <a href="https://github.jasonhk.net/" target="_blank">Jason Kwok</a>. 
+                Powered by <a href="https://tocas-ui.com/" target="_blank">Tocas UI</a>. 
+                Source codes are licensed under <a href="https://github.com/JasonHK/WhatsAdd/blob/master/LICENSE" target="_blank">GPL-3.0</a>.
+            </div>
+        </div>
+
+        <div class="ts modals dimmer">
+            <dialog id="about-dialog" class="ts closable mini modal">
+                <div class="header">
+                    About WhatsAdd
+                </div>
+                <div class="content">
+                    <p>
+                        Developed by <a href="https://github.jasonhk.net/" target="_blank">Jason Kwok</a> in 2018 using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>. 
+                        You can become a contributor by visiting the <a href="https://github.com/JasonHK/WhatsAdd" target="_blank">WhatsAdd Github project page</a>. 
+                    </p>
+                </div>
+                <div class="actions">
+                    <button class="ts deny button">
+                        Close
+                    </button>
+                </div>
+            </dialog>
+        </div>
+        
+        <div class="ts modals dimmer">
+            <dialog id="help-dialog" class="ts closable large modal">
+                <div class="header">
+                    How to use?
+                </div>
+                <div class="content">
+                    <div id="help-tab" class="ts top attached pointing secondary menu">
+                        <a data-tab="android-tab" class="active item">Android</a>
+                        <a data-tab="ios-tab" class="item">iOS</a>
+                        <a data-tab="windows-tab" class="item">Windows</a>
+                        <a data-tab="macos-tab" class="item">maacOS</a>
+                    </div>
+
+                    <div data-tab="android-tab" class="ts active bottom attached tab segment">
+                        WIP
+                    </div>
+                    <div data-tab="ios-tab" class="ts bottom attached tab segment">
+                        WIP
+                    </div>
+                    <div data-tab="windows-tab" class="ts bottom attached tab segment">
+                        WIP
+                    </div>
+                    <div data-tab="macos-tab" class="ts bottom attached tab segment">
+                        WIP
+                    </div>
+                    <div data-tab="null-tab" class="ts bottom attached tab segment">
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="ts deny button">
+                        Close
+                    </button>
+                </div>
+            </dialog>
+        </div>
+
+        <script src="whatsadd.js" type="application/javascript" async></script>
+        <script type="application/javascript">
+            function formSubmit() {
+                var whatsaddForm = document.getElementById("whatsadd-form");
+
+                var countryCode = whatsaddForm.querySelector("#country-code");
+                var phoneNumber = whatsaddForm.querySelector("#phone-number");
+
+                whatsadd(countryCode.value + phoneNumber.value, true);
+
+                countryCode.value = "";
+                phoneNumber.value = "";
+            }
+        </script>
+        <script src="tocas.js" type="application/javascript" async></script>
+        <script type="application/javascript">
+            ts("#help-tab .item").tab();
+        </script>
+    </body>
+</html>
