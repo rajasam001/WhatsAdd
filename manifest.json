@@ -6,10 +6,10 @@
     "display": "standalone",
     "start_url": "https://github.jasonhk.net/WhatsAdd/",
     "short_name": "whatsadd",
-    "theme_color": "transparent",
+    "theme_color": "#0fa186",
     "description": "Add a stranger's phone number to your WhatsApp in three step!",
     "orientation": "natural",
-    "background_color": "transparent",
+    "background_color": "#0fa186",
     "related_applications": [],
     "prefer_related_applications": false,
     "icons": [
