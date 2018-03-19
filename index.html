@@ -138,5 +138,10 @@
         <script type="application/javascript">
             ts("#help-tab .item").tab();
         </script>
+        <script type="application/javascript">
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.register('serviceworker.js', {scope: '/WhatsAdd/'})
+            }
+        </script>
     </body>
 </html>
