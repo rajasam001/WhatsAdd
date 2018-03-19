@@ -23,7 +23,7 @@
                 <div class="right menu">
                     <a class="item" href="javascript:ts('#about-dialog').modal('show');">About</a>
                     <a class="item" href="javascript:ts('#help-dialog').modal('show');">Help</a>
-                    <a class="item" href="https://github.com/JasonHK/WhatsAdd" target="_blank">GitHub</a>
+                    <a class="item" href="https://github.com/JasonHK/WhatsAdd" target="_blank" rel="noopener">GitHub</a>
                 </div>
             </div>
         </div>
@@ -35,33 +35,35 @@
         </div>
 
         <div class="ts very narrow container">
-            <div class="ts borderless segment">
-                <form id="whatsadd-form" class="ts form" action="javascript:formSubmit();" method="GET" autocomplete="off">
-                    <div class="fields">
-                        <div class="five wide required field">
-                            <label>Country code</label>
-                            <div class="ts labeled input">
-                                <div class="ts basic label">+</div>
-                                <input id="country-code" tabindex="1" type="tel" maxlength="3" pattern="[0-9]+" placeholder="852" required autofocus>
+            <main>
+                <div class="ts borderless segment">
+                    <form id="whatsadd-form" class="ts form" action="javascript:formSubmit();" method="GET" autocomplete="off">
+                        <div class="fields">
+                            <div class="five wide required field">
+                                <label for="country-code">Country code</label>
+                                <div class="ts labeled input">
+                                    <div class="ts basic label">+</div>
+                                    <input id="country-code" tabindex="0" type="tel" maxlength="3" pattern="[0-9]+" placeholder="852" required autofocus>
+                                </div>
+                            </div>
+                            <div class="eleven wide required field">
+                                <label for="phone-number">Phone number</label>
+                                <input id="phone-number" tabindex="0" type="tel" maxlength="15" pattern="[0-9]+" placeholder="68977740" required>
                             </div>
                         </div>
-                        <div class="eleven wide required field">
-                            <label>Phone number</label>
-                            <input id="phone-number" tabindex="2" type="tel" maxlength="15" pattern="[0-9]+" placeholder="68977740" required>
+                        <div class="fields">
+                            <button id="submit-button" tabindex="0" type="submit" class="ts primary right floated labeled icon button">
+                                <i class="whatsapp icon"></i>Add to WhatsApp
+                            </button>
                         </div>
-                    </div>
-                    <div class="fields">
-                        <button id="submit-button" tabindex="3" type="submit" class="ts primary right floated labeled icon button">
-                            <i class="whatsapp icon"></i>Add to WhatsApp
-                        </button>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
+            </main>
 
             <div class="ts center aligned vertically fitted basic segment">
-                Made with <span class="red"> &#10084;</span> by <a href="https://github.jasonhk.net/" target="_blank">Jason Kwok</a>. 
-                Powered by <a href="https://tocas-ui.com/" target="_blank">Tocas UI</a>. 
-                Source codes are licensed under <a href="https://github.com/JasonHK/WhatsAdd/blob/master/LICENSE" target="_blank">GPL-3.0</a>.
+                Made with <span class="red"> &#10084;</span> by <a href="https://github.jasonhk.net/" target="_blank" rel="noopener">Jason Kwok</a>. 
+                Powered by <a href="https://tocas-ui.com/" target="_blank" rel="noopener">Tocas UI</a>. 
+                Source codes are licensed under <a href="https://github.com/JasonHK/WhatsAdd/blob/master/LICENSE" target="_blank" rel="noopener">GPL-3.0</a>.
             </div>
         </div>
 
@@ -72,8 +74,8 @@
                 </div>
                 <div class="content">
                     <p>
-                        Developed by <a href="https://github.jasonhk.net/" target="_blank">Jason Kwok</a> in 2018 using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>. 
-                        You can become a contributor by visiting the <a href="https://github.com/JasonHK/WhatsAdd" target="_blank">WhatsAdd Github project page</a>. 
+                        Developed by <a href="https://github.jasonhk.net/" target="_blank" rel="noopener">Jason Kwok</a> in 2018 using <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>. 
+                        You can become a contributor by visiting the <a href="https://github.com/JasonHK/WhatsAdd" target="_blank" rel="noopener">WhatsAdd Github project page</a>. 
                     </p>
                 </div>
                 <div class="actions">
