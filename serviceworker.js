@@ -12,11 +12,17 @@
 var CACHE_NAME = "whatsadd"
 var URLS = [               // Add URL you want to cache in this list.
     "./",                   // If you have separate JS/CSS files,
-    "index.html",         // add path to those files here
+    "manifest.json",         // add path to those files here
+    "index.html",
     "whatsadd.js",
     "colors.css",
     "tocas.css",
-    "tocas.js"
+    "tocas.js",
+    "fonts/icons.eot",
+    "fonts/icons.svg",
+    "fonts/icons.ttf",
+    "fonts/icons.woff",
+    "fonts/icons.woff2"
 ]
 
 // Respond with cached resources
